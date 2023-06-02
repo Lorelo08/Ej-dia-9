@@ -110,6 +110,9 @@ img{
       height: 200px;
 }
 
+.greeing{
+      text-align: center;
+}
       
 @media (max-width: 768px) {
       .column {
