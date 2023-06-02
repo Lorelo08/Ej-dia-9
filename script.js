@@ -2,10 +2,13 @@ function showAlert() {alert
     ('Hola, esta es una alerta desde javaScript!');
 }
 
+const form = document.getElementById('myForm');
+
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,7}$/
     return regex.test(email)
     }
+
 function validateForm() {
     const emailInput = document.getElementById('email');
     const email = emailInput.value;
@@ -16,11 +19,12 @@ function validateForm() {
     }
     }
 
-const form = document.getElementById('myForm');
+if (form){
 form.addEventListener('submit', function(event) {
-event.preventDefault();
+event.preventDefault()
 validateForm();
 });
+}
 
 document.querySelector("button.button-menu-toggle")
 .addEventListener("click", function() {
